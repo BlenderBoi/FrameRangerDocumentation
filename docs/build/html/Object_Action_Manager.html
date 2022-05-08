@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Object Action Manager &mdash; Frame Ranger 3.0.4 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Menu Operators" href="OAM_Menu_Operator.html" />
+    <link rel="prev" title="List Items" href="FRSet_List_Item.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Frame Ranger
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Sections</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="General.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Frame_Range_Manager.html">Frame Range Manager</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Object Action Manager</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#behaviour">Behaviour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#action-mismatch">Action Mismatch</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#add-active-action">Add Active Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#set-active-action">Set Active Action</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#refresh-active">Refresh Active</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#missing-action">Missing Action</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#action-list">Action List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="OAM_Menu_Operator.html">Menu Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="OAM_List_Item.html">List Items</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#action-loader">Action Loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#action-settings">Action Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#pose-markers-list">Pose Markers List</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="PM_Menu_Operator.html">Menu Operators</a></li>
+<li class="toctree-l3"><a class="reference internal" href="PM_List_Item.html">List Items</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#preferences">Preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Action_Bin.html">Action Bin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Action_Baker.html">Action Baker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Timeline_Marker_Manager.html">Timeline Markers Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnimationPlayer.html">Animation Player &amp; Frame Range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Auto_Frame_Range.html">Auto Frame Range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Framerate_Remapper.html">Framerate Remapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Timeline_Utility_Pie.html">Timeline Utility Pie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Preferences.html">Preferences</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Frame Ranger</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+      <li>Object Action Manager</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/Object_Action_Manager.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="object-action-manager">
+<h1>Object Action Manager<a class="headerlink" href="#object-action-manager" title="Permalink to this headline"></a></h1>
+<p>Object Action Manager Stores Actions in Object so that you can associate actions to a object, and switch the object’s action easily. It Also Comes With Many Other Feature that can be useful</p>
+<p>This is the Currently the Primary Focus of the Addon</p>
+<img alt="_images/ObjectActionManager.png" src="_images/ObjectActionManager.png" />
+<div class="section" id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline"></a></h2>
+<p>First Thing In Object Action Manager, is to Load / Add Action into the List</p>
+<p>There are Multiple Ways to Get Action Into the List</p>
+<p>You Can Create New Action, Load Existing Action, Append Action From Other Blend File, Or Load Action From FBX file</p>
+</div>
+<div class="section" id="behaviour">
+<h2>Behaviour<a class="headerlink" href="#behaviour" title="Permalink to this headline"></a></h2>
+<img alt="_images/ActionSwitching.gif" src="_images/ActionSwitching.gif" />
+<p>Setting the Active Item in the List will Update the Object’s Action and Set the Scene Frame Range to the Target Frame Range</p>
+</div>
+<div class="section" id="action-mismatch">
+<h2>Action Mismatch<a class="headerlink" href="#action-mismatch" title="Permalink to this headline"></a></h2>
+<p>Sometimes The Actual Object’s Action and Object Action Manager Can Be Mismatch</p>
+<p>When Object Action Manager Detects that, It Will Displays the Below</p>
+<div class="section" id="add-active-action">
+<h3>Add Active Action<a class="headerlink" href="#add-active-action" title="Permalink to this headline"></a></h3>
+<p>This Will Show If the Active Action is Not in the Object Action List</p>
+<p>If you click this Operator, It will Load the Active Action into the List</p>
+<p>This Usually Happens When You Create A New Action By Adding A Keyframe</p>
+<p>Just Click the Add Active Action to Fix this</p>
+<img alt="_images/AddActiveAction.png" src="_images/AddActiveAction.png" />
+</div>
+<div class="section" id="set-active-action">
+<h3>Set Active Action<a class="headerlink" href="#set-active-action" title="Permalink to this headline"></a></h3>
+<p>This Will Show If the Active Action is in the Object Action List but is not the Active One</p>
+<p>If you click this Operator, It will Set the active action to the correct one in the List</p>
+<p>This Usally Happens When you Manually Change the Action in Action Editor</p>
+<p>Just Click the Set Active Action to Fix this</p>
+<img alt="_images/SetActiveSlot.png" src="_images/SetActiveSlot.png" />
+</div>
+<div class="section" id="refresh-active">
+<h3>Refresh Active<a class="headerlink" href="#refresh-active" title="Permalink to this headline"></a></h3>
+<p>This Will Show If the Object Have No Action But there is Action in Object Action List</p>
+<p>This Usally Happens When you Manually Action From the Object in Action Editor</p>
+<p>Just Click the Set Active Action to Fix This</p>
+<img alt="_images/RefreshActive.png" src="_images/RefreshActive.png" />
+</div>
+<div class="section" id="missing-action">
+<h3>Missing Action<a class="headerlink" href="#missing-action" title="Permalink to this headline"></a></h3>
+<p>This Will Show If an Action in a List is Removed From the Blend File</p>
+<p>Just Click the Remove Missing Action Button to Remove the Missing Action</p>
+<img alt="_images/MissingAction.png" src="_images/MissingAction.png" />
+</div>
+</div>
+<div class="section" id="action-list">
+<h2>Action List<a class="headerlink" href="#action-list" title="Permalink to this headline"></a></h2>
+<p>A List Of Actions Stores in this Object</p>
+<img alt="_images/ObjectActionManager.png" src="_images/ObjectActionManager.png" />
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="OAM_Menu_Operator.html">Menu Operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#add-new-action">Add New Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#import-and-load-fbx-actions">Import And Load FBX Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#choose-and-append-blend-file-action">Choose and Append Blend File Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#append-all-actions-from-multiple-blend-files">Append All Actions From Multiple Blend Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#load-multiple-actions">Load Multiple Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#load-single-actions">Load Single Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#push-all-action-to-nla">Push All Action to NLA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#batch-rename-actions">Batch Rename Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#sort-action-slot">Sort Action Slot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#clear-action-list">Clear Action List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#remove-action-by-condition">Remove Action By Condition</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#clean-list">Clean List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#fake-user-on">Fake User On</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#fake-user-off">Fake User Off</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#bake-selected-actions">Bake Selected Actions</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_Menu_Operator.html#duplicate-and-replace-all-slot">Duplicate and Replace All Slot</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="OAM_List_Item.html">List Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#selection">Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#set-active-slot">Set Active Slot</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#select-object">Select Object</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#play">Play</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#duplicate">Duplicate</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#push-to-nla">Push to NLA</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#bake-action">Bake Action</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#name">Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#bake-name">Bake Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#frame-range">Frame Range</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#use-cyclic">Use Cyclic</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#fake-user">Fake User</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#users">Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="OAM_List_Item.html#remove">Remove</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="action-loader">
+<h2>Action Loader<a class="headerlink" href="#action-loader" title="Permalink to this headline"></a></h2>
+<p>Action Loader Allows you to Load Existing Action in the Blend File to the Object</p>
+<p>It Will List out All Actions in the Blend File, there is a Search Box For you to Use for Filter the Action that you Want to Load</p>
+<img alt="_images/ActionLoader.png" src="_images/ActionLoader.png" />
+<p><strong>Include</strong>: Check if the string in the search box is in the action name</p>
+<p><strong>Exclude</strong>: Check if the string in the search box is not in the action name</p>
+<p><strong>Load All Action</strong>: Load All Action in the Visible in the List</p>
+<p><strong>Action List</strong>: Click the Action Name to Load that Action into the object</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The Action is Loaded to the Object, that means if the Animation is for an Armature, Make Sure the Action is Loaded to the Armature Object and not the Mesh</p>
+</div>
+</div>
+<div class="section" id="action-settings">
+<h2>Action Settings<a class="headerlink" href="#action-settings" title="Permalink to this headline"></a></h2>
+<p>Display the Settings for the Active Action in the List</p>
+<img alt="_images/ActionSettings.png" src="_images/ActionSettings.png" />
+<p><strong>Action Name</strong>: Action Name</p>
+<p><strong>Frame Range</strong>: This Action’s Frame Range</p>
+<p><strong>Manual Frame Range</strong>: Turns on Manual Frame Range to Set your Custom Frame Range</p>
+<p><strong>Use Cyclic</strong>: Turns on Cyclic for this Action</p>
+<p><strong>Misc Settings</strong>: These includes less used options</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Bake Name: Name to be Used when baking animation using Frame Ranger</p></li>
+<li><p>Frame Range Set: Associate this Action with a Frame Range Set, automatically Swtich to this Frame Range Set when Active</p></li>
+</ul>
+</div></blockquote>
+<img alt="_images/ActionMiscSettings.png" src="_images/ActionMiscSettings.png" />
+<p><strong>Pose Markers List</strong>: Pose Markers List of this Action</p>
+<img alt="_images/PoseMarkers.png" src="_images/PoseMarkers.png" />
+</div>
+<div class="section" id="pose-markers-list">
+<h2>Pose Markers List<a class="headerlink" href="#pose-markers-list" title="Permalink to this headline"></a></h2>
+<p>Pose Markers List Present Object’s Pose Markers in a List Form, making it easier to manage.</p>
+<p>Pose Markers is a very hidden feature, this is rarely used, so Pose Markers List have lesser feature, it exist mainly for consistency</p>
+<p>This list is stores in the action</p>
+<img alt="_images/PoseMarkers.png" src="_images/PoseMarkers.png" />
+<p><strong>Notes</strong>: Just a String Field For you to Write Comments or Notes</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="PM_Menu_Operator.html">Menu Operators</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PM_Menu_Operator.html#add-pose-marker">Add Pose Marker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_Menu_Operator.html#export-import-pose-marker">Export &amp; Import Pose Marker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_Menu_Operator.html#batch-rename-marker">Batch Rename Marker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_Menu_Operator.html#clean-overlapped-pose-markers">Clean Overlapped Pose Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_Menu_Operator.html#clear-markers">Clear Markers</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_Menu_Operator.html#remove-pose-markers-by-name">Remove Pose Markers By Name</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="PM_List_Item.html">List Items</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="PM_List_Item.html#move-to-pose-marker">Move to Pose Marker</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_List_Item.html#selection">Selection</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_List_Item.html#name">Name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_List_Item.html#frame">Frame</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_List_Item.html#set-camera">Set Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="PM_List_Item.html#remove">Remove</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="preferences">
+<h2>Preferences<a class="headerlink" href="#preferences" title="Permalink to this headline"></a></h2>
+<p>You Can Enable / Disable, Rename Category, and Rename Label in Preferences</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Default Category: Action Manager</p></li>
+<li><p>Default Label: Object Action Manager</p></li>
+</ul>
+</div></blockquote>
+<img alt="_images/OAMPreferences.png" src="_images/OAMPreferences.png" />
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="FRSet_List_Item.html" class="btn btn-neutral float-left" title="List Items" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="OAM_Menu_Operator.html" class="btn btn-neutral float-right" title="Menu Operators" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, BlenderBoi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

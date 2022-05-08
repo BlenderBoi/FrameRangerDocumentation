@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menu Operators &mdash; Frame Ranger 3.0.4 documentation</title>
+      <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="List Items" href="OAM_List_Item.html" />
+    <link rel="prev" title="Object Action Manager" href="Object_Action_Manager.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="index.html" class="icon icon-home"> Frame Ranger
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <p class="caption" role="heading"><span class="caption-text">Sections</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="Overview.html">Overview</a></li>
+<li class="toctree-l1"><a class="reference internal" href="General.html">General</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Frame_Range_Manager.html">Frame Range Manager</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="Object_Action_Manager.html">Object Action Manager</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="Object_Action_Manager.html#getting-started">Getting Started</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Object_Action_Manager.html#behaviour">Behaviour</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Object_Action_Manager.html#action-mismatch">Action Mismatch</a></li>
+<li class="toctree-l2 current"><a class="reference internal" href="Object_Action_Manager.html#action-list">Action List</a><ul class="current">
+<li class="toctree-l3 current"><a class="current reference internal" href="#">Menu Operators</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#add-new-action">Add New Action</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#import-and-load-fbx-actions">Import And Load FBX Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#choose-and-append-blend-file-action">Choose and Append Blend File Action</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#append-all-actions-from-multiple-blend-files">Append All Actions From Multiple Blend Files</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-multiple-actions">Load Multiple Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#load-single-actions">Load Single Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#push-all-action-to-nla">Push All Action to NLA</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#batch-rename-actions">Batch Rename Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#sort-action-slot">Sort Action Slot</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clear-action-list">Clear Action List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#remove-action-by-condition">Remove Action By Condition</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clean-list">Clean List</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fake-user-on">Fake User On</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fake-user-off">Fake User Off</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#bake-selected-actions">Bake Selected Actions</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#duplicate-and-replace-all-slot">Duplicate and Replace All Slot</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="OAM_List_Item.html">List Items</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="Object_Action_Manager.html#action-loader">Action Loader</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Object_Action_Manager.html#action-settings">Action Settings</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Object_Action_Manager.html#pose-markers-list">Pose Markers List</a></li>
+<li class="toctree-l2"><a class="reference internal" href="Object_Action_Manager.html#preferences">Preferences</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="Action_Bin.html">Action Bin</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Action_Baker.html">Action Baker</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Timeline_Marker_Manager.html">Timeline Markers Manager</a></li>
+<li class="toctree-l1"><a class="reference internal" href="AnimationPlayer.html">Animation Player &amp; Frame Range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Auto_Frame_Range.html">Auto Frame Range</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Framerate_Remapper.html">Framerate Remapper</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Timeline_Utility_Pie.html">Timeline Utility Pie</a></li>
+<li class="toctree-l1"><a class="reference internal" href="Preferences.html">Preferences</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">Frame Ranger</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+          <li><a href="Object_Action_Manager.html">Object Action Manager</a> &raquo;</li>
+      <li>Menu Operators</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="_sources/OAM_Menu_Operator.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <div class="section" id="menu-operators">
+<h1>Menu Operators<a class="headerlink" href="#menu-operators" title="Permalink to this headline"></a></h1>
+<p>Operators to Manage Object Action List</p>
+<img alt="_images/OAMMenuOperator.png" src="_images/OAMMenuOperator.png" />
+<hr class="docutils" />
+<div class="section" id="add-new-action">
+<h2>Add New Action<a class="headerlink" href="#add-new-action" title="Permalink to this headline"></a></h2>
+<p>Add New Empty Action to this Object</p>
+<img alt="_images/AddNewAction.png" src="_images/AddNewAction.png" />
+<p><strong>Name</strong>: New Action Name</p>
+<p><strong>Sync</strong>: Also Update Scene Frame Range Live</p>
+<p><strong>Manual Frame Range</strong>: Use Manual Frame Range</p>
+<p><strong>Manual Frame Range = True</strong></p>
+<blockquote>
+<div><p><strong>Start</strong>: Start Frame</p>
+<p><strong>End</strong>: End Frame</p>
+</div></blockquote>
+<p><strong>Use Fake User</strong>: New Action Will Use Fake User</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="import-and-load-fbx-actions">
+<h2>Import And Load FBX Actions<a class="headerlink" href="#import-and-load-fbx-actions" title="Permalink to this headline"></a></h2>
+<p>A Wrapper Operator for Import FBX, Also Have Options to Use BetterFBX for Importing if is installed</p>
+<p>It Will Import the FBX and Remove All the Imported Items except Actions</p>
+<p>The Action is Then Loaded to the Object</p>
+<img alt="_images/ImportFBX.png" src="_images/ImportFBX.png" />
+<p><strong>Use File Name as Action Name</strong>: Imported Action Will Use Its own File name, Useful for importing in Mixamo Animation</p>
+<p><strong>FBX Importer</strong>: Import Method</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Build In: Uses Build in FBX importer</p></li>
+<li><p>BetterFBX: Uses BetterFBX if Better FBX is Installed.</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Import Settings</strong>: These is the Same as either import fbx settings or betterfbx settings.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This Operator Will Remove Orphan Data, Make Sure all wanted data are not orphan data</p>
+</div>
+</div>
+<hr class="docutils" />
+<div class="section" id="choose-and-append-blend-file-action">
+<h2>Choose and Append Blend File Action<a class="headerlink" href="#choose-and-append-blend-file-action" title="Permalink to this headline"></a></h2>
+<p>Pick and Choose Action from <strong>One Blend File</strong> to Append From and Load to this Object</p>
+<p>After Choosing a blend file, a pop up similar to Action Loader will appear, You can Pick and Choose which action to append by clicking on the action</p>
+<p>Search Filter Also works like Action Loader</p>
+<img alt="_images/AppendActionList.png" src="_images/AppendActionList.png" />
+</div>
+<hr class="docutils" />
+<div class="section" id="append-all-actions-from-multiple-blend-files">
+<h2>Append All Actions From Multiple Blend Files<a class="headerlink" href="#append-all-actions-from-multiple-blend-files" title="Permalink to this headline"></a></h2>
+<p>Append All or Filtered Actions From <strong>Multiple Blend Files</strong> and Load to Action</p>
+<img alt="_images/AppendAllAction.png" src="_images/AppendAllAction.png" />
+<p><strong>Use Filter</strong>: Enable Filter</p>
+<p><strong>Use Filter</strong>: Filter Appended Action</p>
+<p><strong>Include / Exclude</strong>: Filter Method</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Include: Check if Action Name Include Filter String</p></li>
+<li><p>Exclude: Check if Action Name Exclude Filter String</p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="load-multiple-actions">
+<h2>Load Multiple Actions<a class="headerlink" href="#load-multiple-actions" title="Permalink to this headline"></a></h2>
+<p>Operator Version of Action Loader, Loads Filtered Existing Action in Blend File</p>
+<img alt="_images/LoadMultipleActions.png" src="_images/LoadMultipleActions.png" />
+<p><strong>All, Name Include, Name Exclude</strong>: Filter Method</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>All: No Filter</p></li>
+<li><p>Name Include: Check if Action Name Include Filter String</p></li>
+<li><p>Name Exclude: Check if Action Name Exclude Filter String</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Filter String</strong>: Filter String</p>
+<p><strong>Detected Action</strong>: Preview Detected Actions that will be loaded to the object when after running operator</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="load-single-actions">
+<h2>Load Single Actions<a class="headerlink" href="#load-single-actions" title="Permalink to this headline"></a></h2>
+<p>Load One Action to Object</p>
+<img alt="_images/LoadSingleAction.png" src="_images/LoadSingleAction.png" />
+<p><strong>Action</strong>: Action to Load</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="push-all-action-to-nla">
+<h2>Push All Action to NLA<a class="headerlink" href="#push-all-action-to-nla" title="Permalink to this headline"></a></h2>
+<p>Push All Action in Object Action Manager to NLA</p>
+<img alt="_images/PushAllToNLA.png" src="_images/PushAllToNLA.png" />
+<p><strong>Selected Only</strong>: Only Push Selected Action in the List</p>
+<p><strong>Preclear NLA</strong>: Method of Dealing with Existing NLA Strips</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Skip Push if Exist: Skip Pushing Action if the Action Already in NLA</p></li>
+<li><p>Clear All NLA Tracks: Clear All NLA Tracks Before Pushing</p></li>
+<li><p>None: Do Nothing</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Clear Empty NLA Tracks</strong>: Remove NLA Tracks if Empty</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="batch-rename-actions">
+<h2>Batch Rename Actions<a class="headerlink" href="#batch-rename-actions" title="Permalink to this headline"></a></h2>
+<p>Batch Rename All the Actions in List, Adding Prefix, Suffix, or Find and Replace</p>
+<img alt="_images/BatchRenameOAMAction.png" src="_images/BatchRenameOAMAction.png" />
+<p><strong>Mode</strong>: Method of Rename</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Prefix: Prepend String A to the Start of the Name</p></li>
+<li><p>Suffix: Append String A to the End of the Name</p></li>
+<li><p>Replace: Find String A and Replace with String Batch</p></li>
+<li><p>Remove: Remove String A from Name</p></li>
+</ul>
+</div></blockquote>
+<p><strong>String A (Prefix / Suffix / Find)</strong>: Use for Prefix, Suffix, Find and Remove</p>
+<p><strong>String B (Replace)</strong>: Stirng to be Replaced</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="sort-action-slot">
+<h2>Sort Action Slot<a class="headerlink" href="#sort-action-slot" title="Permalink to this headline"></a></h2>
+<p>Sort Action Slot in Order</p>
+<img alt="_images/SortOAMAction.png" src="_images/SortOAMAction.png" />
+<p><strong>Reverse</strong>: Sort in Reverse Order</p>
+<p><strong>Mode</strong>: Sort By Method</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Name: Sort by Action Name</p></li>
+<li><p>Range Size: Sort by Action Frame Range Size</p></li>
+</ul>
+</div></blockquote>
+</div>
+<hr class="docutils" />
+<div class="section" id="clear-action-list">
+<h2>Clear Action List<a class="headerlink" href="#clear-action-list" title="Permalink to this headline"></a></h2>
+<p>Clear All Action in List</p>
+<img alt="_images/ClearActionList.png" src="_images/ClearActionList.png" />
+<p><strong>Remove Action From File</strong>: Also Remove Action from Blend File instead of Just Unload from object</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="remove-action-by-condition">
+<h2>Remove Action By Condition<a class="headerlink" href="#remove-action-by-condition" title="Permalink to this headline"></a></h2>
+<p>Remove Action from List By Condition</p>
+<img alt="_images/RemoveActionByCondition.png" src="_images/RemoveActionByCondition.png" />
+<p><strong>Condition</strong>: Condition to Remove Action</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Name: Sort by Action Name</p></li>
+<li><p>Range Size: Sort by Action Frame Range Size</p></li>
+</ul>
+</div></blockquote>
+<dl>
+<dt><strong>Condition = Name</strong></dt><dd><p><strong>Include / Exclude</strong>: Filter Method</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Name Include: Check if Action Name Include Filter String</p></li>
+<li><p>Name Exclude: Check if Action Name Exclude Filter String</p></li>
+</ul>
+</div></blockquote>
+</dd>
+</dl>
+<p><strong>Condition = Range Size</strong></p>
+<blockquote>
+<div><ul>
+<li><p><strong>Operator</strong>: Type of Operator for Comparison</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Greater or Equal: Match if Action Frame Range Size is Greater or Equal than Search Size</p></li>
+<li><p>Lesser or Equal: Match if Action Frame Range Size is Lesser or Equal than Search Size</p></li>
+<li><p>Equal: Match if Action Frame Range Size is Equal than Search Size</p></li>
+</ul>
+</div></blockquote>
+</li>
+<li><p><strong>Frame Range Size</strong>: Frame Range Size Use to Compare</p></li>
+</ul>
+</div></blockquote>
+<p><strong>Use Curve Frame Range</strong>: Ignore Manual Frame Range</p>
+<p><strong>Remove Action</strong>: Also Remove Action from Blend File instead of Just Unload from object</p>
+<p><strong>Deteced Action</strong>: Preview Detected Actions that will be removed</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="clean-list">
+<h2>Clean List<a class="headerlink" href="#clean-list" title="Permalink to this headline"></a></h2>
+<p>Remove Action Slot with Missing Action</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="fake-user-on">
+<h2>Fake User On<a class="headerlink" href="#fake-user-on" title="Permalink to this headline"></a></h2>
+<p>Turn On All Fake User of Action in Object’s Action List</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="fake-user-off">
+<h2>Fake User Off<a class="headerlink" href="#fake-user-off" title="Permalink to this headline"></a></h2>
+<p>Turn Off All Fake User of Action in Object’s Action List</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="bake-selected-actions">
+<h2>Bake Selected Actions<a class="headerlink" href="#bake-selected-actions" title="Permalink to this headline"></a></h2>
+<p>Bake Selected Actions in the Object Action List</p>
+<img alt="_images/BakeSelectedSlot.png" src="_images/BakeSelectedSlot.png" />
+<p><strong>Bake to New Action / Bake to Self</strong>: Bake action into a new action, or bake to current action</p>
+<p><strong>Replace if Exist</strong>: Replace Action if Already Exist Action with Name</p>
+<p><strong>Move Slot to Bottom</strong>: Move Baked Action to the Bottom of the List</p>
+<p><strong>Rename</strong>: Rename Settings for Baked Action</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Prefix: Prepend String A to the Start of the Name</p></li>
+<li><p>Suffix: Append String A to the End of the Name</p></li>
+<li><p>Replace: Find String A and Replace with String Batch</p></li>
+</ul>
+</div></blockquote>
+<p><strong>String A (Prefix / Suffix / Find)</strong>: Use for Prefix, Suffix, Find and Remove</p>
+<p><strong>String B (Replace)</strong>: Stirng to be Replaced</p>
+<p><strong>Use Bake Name When Available</strong>: Uses Bake Name in Misc Settings of Action if is not empty</p>
+<p><strong>Use Fake User</strong>: Enable Fake User for Baked Action</p>
+<p><strong>Bake Settings</strong>: Same Settings with the Blender Build in Bake Operator</p>
+</div>
+<hr class="docutils" />
+<div class="section" id="duplicate-and-replace-all-slot">
+<h2>Duplicate and Replace All Slot<a class="headerlink" href="#duplicate-and-replace-all-slot" title="Permalink to this headline"></a></h2>
+<p>Duplicate All Action in the List and Replace it All in Slot</p>
+<p>Useful when you want to make a variation set of animation</p>
+<img alt="_images/DuplicateAndReplaceAllSlot.png" src="_images/DuplicateAndReplaceAllSlot.png" />
+<p><strong>Mode</strong>: Rename Method</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Prefix: Prepend String A to the Start of the Name</p></li>
+<li><p>Suffix: Append String A to the End of the Name</p></li>
+<li><p>Replace: Find String A and Replace with String Batch</p></li>
+</ul>
+</div></blockquote>
+<p><strong>String A (Prefix / Suffix / Find)</strong>: Use for Prefix, Suffix, Find and Remove</p>
+<p><strong>String B (Replace)</strong>: Stirng to be Replaced</p>
+<p><strong>Use Fake User</strong>: Enable Fake User for Baked Action</p>
+</div>
+</div>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="Object_Action_Manager.html" class="btn btn-neutral float-left" title="Object Action Manager" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="OAM_List_Item.html" class="btn btn-neutral float-right" title="List Items" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2022, BlenderBoi.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
