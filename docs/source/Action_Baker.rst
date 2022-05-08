@@ -1,5 +1,5 @@
 Action Baker
-------------
+============
 
 A Tool that Helps Bake Animation From Control Rig to Deform Rig using `CGDive's <https://www.youtube.com/c/CGDive/videos>`_ Workflow.  
 
@@ -15,7 +15,7 @@ While It might have other application, this tool is Specifically Made for CGDive
 
 
 Action Selector 
-+++++++++++++++
+---------------
 
 This Shows The Action List Of your Control Armature and Deform Armature for easy Access, the little select Icon Next to the Tab Allows Blender to Select the Armature When Switching Tabs
 
@@ -31,7 +31,7 @@ The Purpose of this is to Allow you to Select Action Without Finding the Object 
 **Deselect All**: Deselect All Action
 
 Armature Input
-+++++++++++++++
+---------------
 
 **Control Armature**: Control Armature that Controls the Deform Armature
 
@@ -39,14 +39,14 @@ Armature Input
 
 
 Constraint
-+++++++++++++++
+---------------
 
 **Mute Constraint**: Mute All Constraint On Deform Armature, Free it From Control Armature 
 
 **Unmute Constraint**: Unmute All Constraint On Deform Armature, Making it Control by Control Rig Again
 
 Bake Deform Armature
-++++++++++++++++++++
+--------------------
 
 Start Baking Selected Actions
 
@@ -62,7 +62,7 @@ Check Below For Information About The Settings
 
 
 Settings
-++++++++++++++++++++
+--------------------
 
 Settings Used for Baking the Deform Armature
 
