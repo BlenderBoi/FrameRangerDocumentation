@@ -1,5 +1,5 @@
 Action Baker
-++++++++++++
+------------
 
 A Tool that Helps Bake Animation From Control Rig to Deform Rig using `CGDive's <https://www.youtube.com/c/CGDive/videos>`_ Workflow.  
 
